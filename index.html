@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Assignment Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Student Assignment Tracker</h1>
+            <p>Manage your assignments using a Stack (LIFO)</p>
+        </header>
+
+        <section class="form-section">
+            <h2>Add New Assignment</h2>
+
+            <form id="assignmentForm">
+                <input
+                    type="text"
+                    id="assignmentInput"
+                    placeholder="Enter assignment title..."
+                    required
+                >
+
+                <button type="submit" class="add-btn">
+                    + Add Assignment
+                </button>
+            </form>
+        </section>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3 id="totalCount">0</h3>
+                <p>Total Assignments</p>
+            </div>
+
+            <div class="summary-card">
+                <h3 id="latestCount">None</h3>
+                <p>Latest Assignment</p>
+            </div>
+        </section>
+
+        <section class="stack-section">
+            <div class="section-heading">
+                <h2>Assignment Stack</h2>
+                <span>TOP = Removed First</span>
+            </div>
+
+            <div id="assignmentList" class="assignment-list">
+                <p class="empty-message">
+                    No assignments yet. Add your first assignment!
+                </p>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button id="peekBtn" class="peek-btn">
+                View Latest
+            </button>
+
+            <button id="popBtn" class="remove-btn">
+                Remove Latest
+            </button>
+
+            <button id="clearBtn" class="clear-btn">
+                Clear All
+            </button>
+        </section>
+
+        <p id="message" class="message" role="status"
+           aria-live="polite"></p>
+
+        <footer>
+            <p>Student Assignment Tracker | Stack Data Structure</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
